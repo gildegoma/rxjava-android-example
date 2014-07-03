@@ -3,9 +3,9 @@ language: android
 android:
   components:
     - build-tools-19.0.3
-    - android-19
-    - sys-img-armeabi-v7a-android-19
-    - extra
+    #- android-19
+    #- sys-img-armeabi-v7a-android-19
+    #- extra
     - add-on
 env:
   matrix:
