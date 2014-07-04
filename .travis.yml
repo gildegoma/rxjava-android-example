@@ -3,13 +3,19 @@ language: android
 android:
   components:
     - build-tools-19.0.3
-    #- android-19
-    #- sys-img-armeabi-v7a-android-19
-    #- extra
-    - add-on
+#    - android-19
+#    - sys-img-armeabi-v7a-android-19
+#    - extra
+#    - add-on
 env:
   matrix:
     - ANDROID_TARGET=android-19 ANDROID_ABI=armeabi-v7a
+before_install:
+  # Workaround to Docker symlink issue ???
+  - export ANDROID_HOME=/usr/local/android-sdk-23
+  - "android-update-sdk --components='android-19'"
+  - "android-update-sdk --components='sys-img-armeabi-v7a-android-19'"
+  - "android-update-sdk --components='extra'"
 before_script:
   - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
   - emulator -avd test -no-skin -no-audio -no-window &
