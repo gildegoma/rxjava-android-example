@@ -1,4 +1,4 @@
-# Payload trigger
+# Payload trigger, go again
 sudo: false
 language: android
 android:
