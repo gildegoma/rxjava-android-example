@@ -14,7 +14,7 @@ env:
 before_install:
   # Workaround to Docker symlink issue ???
   - export ANDROID_HOME=/usr/local/android-sdk-23/
-  - "export PATH=${ANDROID_HOME}tools:${ANDROID_HOME}platform-tools:${PATH}
+  - "export PATH=${ANDROID_HOME}tools:${ANDROID_HOME}platform-tools:${PATH}"
   - "android-update-sdk --components='android-19'"
   - "android-update-sdk --components='sys-img-armeabi-v7a-android-19'"
   - "android-update-sdk --components='extra'"
