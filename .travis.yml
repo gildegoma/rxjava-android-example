@@ -16,7 +16,11 @@ env:
 
 before_install:
   # manually inspect the system
-  - cat /usr/share/travis/system_info
+  - 'du -ms /usr/local/android-sdk/*/*'
+  - 'du -ms /usr/local/android-sdk/*'
+  - 'du -ms /usr/local/android-sdk/'
+  - 'sudo ls -ltrh /usr/share/*/*'
+  - 'sudo cat /usr/share/travis/system_info'
 
 before_script:
   - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
