@@ -1,15 +1,15 @@
 # use staging environment
 group: dev
 
-sudo: true
+sudo: false
 language: android
 android:
   components:
     - build-tools-19.0.3
-    - android-19
-    - sys-img-armeabi-v7a-android-19
-    - extra
-    - add-on
+#    - android-19
+#    - sys-img-armeabi-v7a-android-19
+#    - extra
+#    - add-on
 env:
   matrix:
     - ANDROID_TARGET=android-19 ANDROID_ABI=armeabi-v7a
