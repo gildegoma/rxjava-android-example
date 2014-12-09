@@ -1,5 +1,5 @@
-# use staging environment
-group: dev
+# uncomment to use staging environment
+# group: dev
 
 #sudo: false
 language: android
