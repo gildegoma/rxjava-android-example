@@ -2,9 +2,6 @@ sudo: required
 dist: trusty
 group: edge
 
-language: java
-jdk: oraclejdk9
-
 env:
   global:
     - MAVEN_SKIP_RC=true
@@ -12,6 +9,10 @@ env:
     - ANDROID_TARGET=android-19 ANDROID_ABI=armeabi-v7a
 
 language: android
+jdk:
+  - oraclejdk7
+  - oraclejdk8
+  - oraclejdk9
 android:
   components:
     - build-tools-19.0.3
